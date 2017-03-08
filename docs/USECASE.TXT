@@ -1,0 +1,54 @@
+Play Game
+1. Welcome and Help/Instructions message is printed to the screen
+2. Maze is displayed to the user.
+3. System prompts user to enter input.
+
+Variation 1 (invalid input)
+3.1 User enters invalid input.
+3.2 Display error message.
+3.3 Go back to step 3.
+
+Variation 2 (Help Input)
+3.1 User enters help button.
+3.2 Display help.
+3.3 Go back to step 3.
+
+Variation 3 (Map Toggle Input)
+3.1 User enters map toggle button.
+3.2 Toggle map visibility (True or False).
+3.3 Print maze.
+3.4 Go back to step 3.
+
+Variation 4 (Direction is towards wall)
+3.1 Print hit a wall message.
+3.2 Go back to step 3.
+
+4. User inputs a direction: (WASD)
+5. System updates the maze to reflect the player's movement.
+
+Variation 1 (Player on Cheese, Cheese < 4)
+5.1 System increases player’s cheese count
+5.2 go to step 6
+
+Variation 2 (Player on Cheese, Cheese equals 4) WIN
+5.1 System increase player’s cheese count
+5.2 Print win message
+5.3 Print revealed maze.
+5.4 Program ends
+
+Variation 3 (Player on Cat, Player Loses) LOSE
+5.1 Print eaten message.
+5.2 Print maze.
+5.3 Print Game Over message.
+5.4 Program ends
+
+6. System also update the maze with all Cat movements.
+
+Variation 1 (Cat moves into player) LOSE
+6.1 Print eaten message.
+6.2 Print maze.
+6.3 Print Game Over message.
+6.4 Program ends
+
+7. Print maze to screen
+8. Go back to step 3

@@ -1,0 +1,43 @@
+HOW THE BOARD IS DRAWN
+The entry class (main program) will use the Display class from the UI package for printing to the command line.
+This class consists of the printMazeToScreen(Maze maze) function that takes in a Maze object as a parameter.
+A maze is a 2D array of Cell objects. Each Cell consists of boolean flags indicating what type of “block” it is.
+
+Each cell could be:
+* Discovered (or undiscovered)
+* A wall
+* Contain a cat
+* Contain the mouse
+* Contain the cheese
+* A border (a wall that surrounds the maze)
+
+Under typical use, printMazeToScreen() will iterate through the 2D array of Cells,
+checking each flag to know what to render. Since in some cases multiple flags can be set
+(i.e. cat and cheese on the same block) and only one thing can be drawn on a given ‘tile’ at a time, the functions use
+priority based selection to decide what gets drawn.  As a sample case, the cat has higher priority over the cheese and
+ will be drawn instead of the cheese if a cell happens to contain a cat and the cheese.
+If the user wishes to see the whole board without discovering the other tiles, the user can enter a toggle input
+that will set a flag in the maze object indicating if it should be printed with everything revealed.
+In the previous explanation of how the maze is draw, this flag is set to false. As in the previous section,
+what gets drawn on the board depends on the priority of each flag, in the case where the whole maze is to be revealed,
+the discovered flag is disregarded.
+
+HOW THE USER INPUT (MOVE MOUSE) IS HANDLED
+The class for handling user input is in the UI package of this program.
+This class will get user input from the command line and will make sure that the input entered is valid.
+It will keep prompting the user for input until a valid command is received. This input is translated to a standardized
+list of inputs that will be used throughout the rest of the program to avoid using Strings.
+Using enumerators, these standard inputs are:
+* Up
+* Down
+* Left
+* Right
+* Map
+* Help
+* Invalid
+
+If the user inputs a direction, a the main program will call a function in the Maze that moves the player.
+This function will return true or false depending on the direction entered. If the mouse will hit a wall on the given
+direction, a message is displayed indicating that the mouse hits a wall and the player is prompted again for another
+input.  If this function returns true, then the mouse was successfully moved to ites new position.
+The mouse’s coordinates are then updated.
