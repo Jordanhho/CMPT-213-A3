@@ -1,9 +1,9 @@
-package ca.cmpt213.as2.UI;
+package ca.cmpt213.as3.UI;
 
 
 import java.util.Scanner;
 
-import ca.cmpt213.as2.MazeGame.ValidInput;
+import ca.cmpt213.as3.MazeGame.ValidInput;
 
 /**
  * UserInput class to obtain user input with case statement depending on what input

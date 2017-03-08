@@ -1,6 +1,9 @@
-package ca.cmpt213.as2.UI;
+package ca.cmpt213.as3.UI;
 
 import ca.cmpt213.as2.MazeGame.*;
+import ca.cmpt213.as3.MazeGame.Cell;
+import ca.cmpt213.as3.MazeGame.Maze;
+import ca.cmpt213.as3.MazeGame.MazeFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

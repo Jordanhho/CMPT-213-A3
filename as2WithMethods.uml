@@ -3,72 +3,72 @@
   <ID>JAVA</ID>
   <OriginalElement>ca.cmpt213.as2</OriginalElement>
   <nodes>
-    <node x="0.0" y="1503.0">ca.cmpt213.as2.UI.Display</node>
-    <node x="1031.7125" y="588.0">ca.cmpt213.as2.MazeGame.Cell</node>
-    <node x="0.0" y="332.0">ca.cmpt213.as2.MazeGame.Player</node>
-    <node x="1039.0" y="321.0">ca.cmpt213.as2.MazeGame.Cat</node>
-    <node x="1462.0" y="1503.0">ca.cmpt213.as2.UI.UserInput</node>
-    <node x="633.0" y="244.0">ca.cmpt213.as2.MazeGame.MazeController</node>
-    <node x="484.47291666666666" y="0.0">ca.cmpt213.as2.MazeGame.Coordinate</node>
-    <node x="1158.003125" y="77.0">ca.cmpt213.as2.MazeGame.ValidInput</node>
-    <node x="732.0" y="1503.0">ca.cmpt213.as2.UI.MazeElements</node>
-    <node x="1099.0" y="1503.0">ca.cmpt213.as2.Game</node>
-    <node x="474.0625" y="1040.0">ca.cmpt213.as2.MazeGame.Maze</node>
-    <node x="624.5625" y="1406.0">ca.cmpt213.as2.MazeGame.MazeFactory</node>
-    <node x="281.0" y="343.0">ca.cmpt213.as2.MazeGame.Generator</node>
-    <node x="1310.7854166666666" y="1073.0">ca.cmpt213.as2.MazeGame.MazeGenerator</node>
+    <node x="0.0" y="1503.0">Display</node>
+    <node x="1031.7125" y="588.0">Cell</node>
+    <node x="0.0" y="332.0">Player</node>
+    <node x="1039.0" y="321.0">Cat</node>
+    <node x="1462.0" y="1503.0">UserInput</node>
+    <node x="633.0" y="244.0">MazeController</node>
+    <node x="484.47291666666666" y="0.0">Coordinate</node>
+    <node x="1158.003125" y="77.0">ValidInput</node>
+    <node x="732.0" y="1503.0">MazeElements</node>
+    <node x="1099.0" y="1503.0">ca.cmpt213.as3.Game</node>
+    <node x="474.0625" y="1040.0">Maze</node>
+    <node x="624.5625" y="1406.0">MazeFactory</node>
+    <node x="281.0" y="343.0">Generator</node>
+    <node x="1310.7854166666666" y="1073.0">MazeGenerator</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="ca.cmpt213.as2.MazeGame.Maze" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="Maze" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Cell" target="ca.cmpt213.as2.MazeGame.Cat">
+    <edge source="Cell" target="Cat">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.MazeGenerator" target="ca.cmpt213.as2.MazeGame.Cell">
+    <edge source="MazeGenerator" target="Cell">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Maze" target="ca.cmpt213.as2.MazeGame.Cat">
+    <edge source="Maze" target="Cat">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.MazeController" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="MazeController" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Maze" target="ca.cmpt213.as2.MazeGame.Player">
+    <edge source="Maze" target="Player">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Cat" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="Cat" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.MazeGenerator" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="MazeGenerator" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Generator" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="Generator" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Player" target="ca.cmpt213.as2.MazeGame.Coordinate">
+    <edge source="Player" target="Coordinate">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Maze" target="ca.cmpt213.as2.MazeGame.Cell">
+    <edge source="Maze" target="Cell">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.Cat" target="ca.cmpt213.as2.MazeGame.ValidInput">
+    <edge source="Cat" target="ValidInput">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="ca.cmpt213.as2.MazeGame.MazeFactory" target="ca.cmpt213.as2.MazeGame.Maze">
+    <edge source="MazeFactory" target="Maze">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>

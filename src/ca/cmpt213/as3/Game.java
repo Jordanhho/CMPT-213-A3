@@ -1,8 +1,12 @@
-package ca.cmpt213.as2;
+package ca.cmpt213.as3;
 
-import ca.cmpt213.as2.MazeGame.*;
-import ca.cmpt213.as2.UI.Display;
-import ca.cmpt213.as2.UI.UserInput;
+import ca.cmpt213.as3.MazeGame.*;
+import ca.cmpt213.as3.UI.Display;
+import ca.cmpt213.as3.UI.UserInput;
+import ca.cmpt213.as3.MazeGame.Maze;
+import ca.cmpt213.as3.MazeGame.MazeController;
+import ca.cmpt213.as3.MazeGame.MazeFactory;
+import ca.cmpt213.as3.MazeGame.ValidInput;
 
 import java.util.Scanner;
 

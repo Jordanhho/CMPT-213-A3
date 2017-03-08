@@ -1,4 +1,4 @@
-package ca.cmpt213.as2.MazeGame;
+package ca.cmpt213.as3.MazeGame;
 
 /**
  * Player class keeps track of player coordinate and cheese collected.

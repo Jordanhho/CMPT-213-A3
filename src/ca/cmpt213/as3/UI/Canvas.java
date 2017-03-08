@@ -1,4 +1,4 @@
-package ca.cmpt213.as2.UI;
+package ca.cmpt213.as3shapes.A3;
 
 import java.awt.Color;
 
@@ -33,7 +33,6 @@ public class Canvas {
 
         initializeArrays();
     }
-
     private void initializeArrays() {
         for (int y = 0; y < sizeY; y++) {
             for (int x = 0; x < sizeX; x++) {
@@ -46,7 +45,6 @@ public class Canvas {
     public int getSizeX() {
         return sizeX;
     }
-
     public int getSizeY() {
         return sizeY;
     }
@@ -61,7 +59,6 @@ public class Canvas {
             data[y][x] = ch;
         }
     }
-
     public char getPointText(int x, int y) {
         return data[y][x];
     }

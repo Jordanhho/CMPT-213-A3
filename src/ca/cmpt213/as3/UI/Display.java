@@ -1,7 +1,7 @@
-package ca.cmpt213.as2.UI;
+package ca.cmpt213.as3.UI;
 
-import ca.cmpt213.as2.MazeGame.Cell;
-import ca.cmpt213.as2.MazeGame.Maze;
+import ca.cmpt213.as3.MazeGame.Cell;
+import ca.cmpt213.as3.MazeGame.Maze;
 
 /**
  * Display Class to print out maze, elements and messages

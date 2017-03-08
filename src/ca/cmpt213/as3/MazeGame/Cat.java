@@ -1,4 +1,4 @@
-package ca.cmpt213.as2.MazeGame;
+package ca.cmpt213.as3.MazeGame;
 
 /**
  * Cat class holds identifiers for which cat and coordinate of the maze they are in.

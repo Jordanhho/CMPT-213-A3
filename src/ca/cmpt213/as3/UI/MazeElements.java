@@ -1,4 +1,4 @@
-package ca.cmpt213.as2.UI;
+package ca.cmpt213.as3.UI;
 
 /**
  * MazeElements class to add in symbols map for every element.

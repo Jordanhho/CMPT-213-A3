@@ -1,4 +1,4 @@
-package ca.cmpt213.as2.MazeGame;
+package ca.cmpt213.as3.MazeGame;
 
 /**
  * Coordinate class stores (row, column) to keep track of locations in the maze easier.
