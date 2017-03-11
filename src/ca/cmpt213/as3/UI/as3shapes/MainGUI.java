@@ -1,4 +1,8 @@
-package ca.cmpt213.as3shapes.A3;
+package ca.cmpt213.as3.UI.as3shapes;
+
+import ca.cmpt213.as3.UI.as3shapes.shapes.Rectangle;
+import ca.cmpt213.as3.UI.as3shapes.shapes.TextBox;
+import ca.cmpt213.as3.UI.as3shapes.shapes.Triangle;
 
 import java.awt.Color;
 import java.awt.Component;

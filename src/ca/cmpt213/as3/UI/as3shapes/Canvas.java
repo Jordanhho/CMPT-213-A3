@@ -1,4 +1,5 @@
-package ca.cmpt213.as3shapes.A3;
+package ca.cmpt213.as3.UI.as3shapes;
+
 
 import java.awt.Color;
 

@@ -1,6 +1,6 @@
-package ca.cmpt213.as3shapes.A3;
+package ca.cmpt213.as3.UI.as3shapes;
 
-import ca.cmpt213.as3shapes.A3.Canvas;
+import ca.cmpt213.as3.UI.as3shapes.Canvas;
 
 import java.awt.Color;
 import java.awt.Component;

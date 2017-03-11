@@ -4,11 +4,11 @@ package ca.cmpt213.as3.MazeGame;
  * Class responsible for returning a generated (playable) maze to the user.
  */
 public class MazeFactory {
-    private static final int DEFAULT_MAZE_HEIGHT = 20;
-    private static final int DEFAULT_MAZE_WIDTH = 15;
+    private static final int DEFAULT_MAZE_HEIGHT = 15;
+    private static final int DEFAULT_MAZE_WIDTH = 20;
 
     /**
-     * Generates a playable maze with the default size of 20 tall 15 wide (including borders).
+     * Generates a playable maze with the default size of 15 tall 20 wide (including borders).
      *
      * Calls the mazeGen() and spawnCheese methods to initialize the maze.
      * @param cellRadiusView the view block radius for the player
