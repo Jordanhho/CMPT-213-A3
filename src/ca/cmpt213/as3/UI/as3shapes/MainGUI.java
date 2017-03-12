@@ -32,9 +32,8 @@ public class MainGUI {
         // Sample function showing use of Canvas and CanvasIcon.
         // Comment this out when you have later tests working.
         frame.add(makeCanvasIcon());
-
         // Test routines to exercise Picture and the Shape classes.
-//		frame.add(makeRectanglesPicture());
+		//frame.add(makeRectanglesPicture());
 //		frame.add(makeTrianglesPicture());
 //		frame.add(makeTextBoxesPicture());
 //		frame.add(makeMixedPicture());
@@ -57,11 +56,13 @@ public class MainGUI {
         Canvas canvas = new Canvas(15, 20);
 
         // Draw characters onto the canvas
+
         canvas.setPointText(0, 0, 'S');
         canvas.setPointText(1, 1, '!');
         canvas.setPointText(canvas.getSizeX()-1, canvas.getSizeY()-1, 'B');
 
         // Setting colours in the canvas
+
         for (int i = 0; i < 5; i++) {
             canvas.setPointColor(i + 3, 8, Color.RED);
             canvas.setPointColor(5, i + 6, Color.GREEN);
@@ -74,10 +75,12 @@ public class MainGUI {
             canvas.setPointText(pos, pos, (char)('A' + i));
         }
 
+
         // Trying to draw off the canvas is just ignored
         // (useful when drawing a shape beyond the bounds of the canvas; you
         //  can ignore the fact that it's off the page!)
         canvas.setPointText(canvas.getSizeX(), canvas.getSizeY(), 'E');
+
 
         // Create an icon from the canvas and put it into a label
         CanvasIcon icon = new CanvasIcon(canvas);
@@ -95,7 +98,7 @@ public class MainGUI {
     private static PicturePanel makeRectanglesPicture() {
         PicturePanel picture = new PicturePanel("Rectangle Picture Test:", 60, 19);
         testRectanglesRow1(picture);
-        testRectangleRow2(picture);
+        //testRectangleRow2(picture);
         return picture;
     }
 
@@ -104,11 +107,13 @@ public class MainGUI {
         r1.setColor(Color.MAGENTA);
         picture.addFront(r1);
 
+
+
         Rectangle r2 = new Rectangle(5, 0, 2, 2);
         r2.setBorderChar('*');
         r2.setColor(Color.GREEN);
         picture.addFront(r2);
-
+        /*
         Rectangle r3 = new Rectangle(10, 0, 3, 3);
         r3.setColor(Color.RED);
         picture.addFront(r3);
@@ -119,7 +124,9 @@ public class MainGUI {
         Rectangle r5 = new Rectangle(27, 0, 35, 18);
         r5.setColor(Color.ORANGE);
         picture.addFront(r5);
+        */
     }
+
 
     private static void testRectangleRow2(PicturePanel picture) {
         final int ROW = 5;
@@ -143,6 +150,7 @@ public class MainGUI {
         picture.addFront(r1);
     }
 
+    /*
     // //////////////////////////////////////////////////////////////////////////
     // Triangle Test
     // //////////////////////////////////////////////////////////////////////////
@@ -375,5 +383,6 @@ public class MainGUI {
 
         return pic;
     }
+    */
 
 }

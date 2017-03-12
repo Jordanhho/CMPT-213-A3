@@ -9,16 +9,18 @@ import java.awt.*;
  */
 public interface Shape {
 
-    public Coordinate getLocation();
+    public int getLocationX();
 
-    public void setBorderCharacter(char borderCharacter);
+    public int getLocationY();
 
-    public char getBorderCharacter();
+    public void setBorderChar(char borderCharacter);
+
+    public char getBorderChar();
 
     public void setColor(Color color);
 
     public Color getColor();
 
-    public void draw();
+    public void draw(ca.cmpt213.as3.UI.as3shapes.Canvas canvas);
 }
 

@@ -1,6 +1,5 @@
 package ca.cmpt213.as3.UI.as3shapes.shapes;
 
-import ca.cmpt213.as3.MazeGame.Coordinate;
 import ca.cmpt213.as3.UI.as3shapes.Canvas;
 import ca.cmpt213.as3.UI.as3shapes.shapes.Rectangle;
 
@@ -11,8 +10,8 @@ public class TextBox extends Rectangle {
 
     private  String textMessage;
 
-    public TextBox(Coordinate location, int width, int height, String textMessage) {
-        super(location, width, height);
+    public TextBox(int xLocation, int ylocation, int width, int height, String textMessage) {
+        super(xLocation, ylocation, width, height);
         this.textMessage = textMessage;
     }
 
@@ -23,7 +22,6 @@ public class TextBox extends Rectangle {
     public void setMessage(String textMessage) {
         this.textMessage = textMessage;
     }
-
 
     public void draw(Canvas canvas) {
 

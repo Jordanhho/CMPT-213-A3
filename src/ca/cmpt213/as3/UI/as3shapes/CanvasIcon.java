@@ -10,7 +10,7 @@ import java.awt.Graphics2D;
 import javax.swing.Icon;
 
 /**
- * An Icon which renders a Canvas into a graphical form. - Pass the constructor
+ * An IconImager which renders a Canvas into a graphical form. - Pass the constructor
  * the Canvas you want to render. - Place the CanvasIcon in a JLabel for
  * displaying on the screen.
  */

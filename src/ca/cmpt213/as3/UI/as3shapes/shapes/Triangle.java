@@ -9,16 +9,16 @@ public class Triangle extends ShapeImpl {
 
     private int size;
 
-    public Triangle(Coordinate location, int width, int height, int size) {
-        super(location, width, height);
+    public Triangle(int xLocation, int yLocation, int size) {
+        super(xLocation, yLocation, 0, 0);
         this.size = size;
     }
 
-    protected boolean isBorder(Coordinate location) {
+    protected boolean isBorder(int xLocation, int yLocation) {
         return true;
     }
 
-    protected boolean isInside(Coordinate location) {
+    protected boolean isInside(int xLocation, int yLocation) {
 
         return true;
     }

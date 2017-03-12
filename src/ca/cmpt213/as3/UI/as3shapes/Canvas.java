@@ -75,4 +75,8 @@ public class Canvas {
     public Color getPointColor(int x, int y) {
         return color[y][x];
     }
+
+    
+
+
 }
