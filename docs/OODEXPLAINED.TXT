@@ -36,8 +36,8 @@ Using enumerators, these standard inputs are:
 * Help
 * Invalid
 
-If the user inputs a direction, a the main program will call a function in the Maze that moves the player.
-This function will return true or false depending on the direction entered. If the mouse will hit a wall on the given
-direction, a message is displayed indicating that the mouse hits a wall and the player is prompted again for another
+If the user inputs a input, a the main program will call a function in the Maze that moves the player.
+This function will return true or false depending on the input entered. If the mouse will hit a wall on the given
+input, a message is displayed indicating that the mouse hits a wall and the player is prompted again for another
 input.  If this function returns true, then the mouse was successfully moved to ites new position.
 The mouse’s coordinates are then updated.

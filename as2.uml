@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Diagram>
   <ID>JAVA</ID>
-  <OriginalElement>ca.cmpt213.as2</OriginalElement>
+  <OriginalElement>ca.cmpt213.as3</OriginalElement>
   <nodes>
     <node x="285.0" y="425.0">Display</node>
     <node x="351.6046875" y="170.0">Cell</node>

@@ -22,9 +22,12 @@ public class Maze {
     //Cats
     private List<Cat> cats = new ArrayList<Cat>() {
         {
-            add(new Cat(0, new Coordinate(1, 13)));
-            add(new Cat(1, new Coordinate(18, 1)));
-            add(new Cat(2, new Coordinate(18, 13)));
+            add(new Cat(0, new Coordinate(1, 18)));
+            add(new Cat(0, new Coordinate(1, 18)));
+            add(new Cat(1, new Coordinate(13, 1)));
+            add(new Cat(1, new Coordinate(13, 1)));
+            add(new Cat(2, new Coordinate(13, 18)));
+            add(new Cat(2, new Coordinate(13, 18)));
         }
     };
 

@@ -23,7 +23,7 @@ Variation 4 (Direction is towards wall)
 3.1 Print hit a wall message.
 3.2 Go back to step 3.
 
-4. User inputs a direction: (WASD)
+4. User inputs a input: (WASD)
 5. System updates the maze to reflect the player's movement.
 
 Variation 1 (Player on Cheese, Cheese < 4)
