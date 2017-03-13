@@ -2,8 +2,11 @@ package ca.cmpt213.as3.UI;
 
 import ca.cmpt213.as3.MazeGame.Maze;
 import ca.cmpt213.as3.MazeGame.MazeFactory;
+import ca.cmpt213.as3.MazeGame.ValidInput;
+import ca.cmpt213.as3.UI.GUI.ButtonPanel;
 import ca.cmpt213.as3.UI.GUI.GameGrid;
 import ca.cmpt213.as3.UI.GUI.InputStatusPanel;
+import ca.cmpt213.as3.UI.GUI.StatusBoxPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -47,15 +50,31 @@ public class GameMain {
 
     public GameMain() {
         Maze maze = MazeFactory.makeDefaultMaze(cellRadiusView, mazeDifficulty);
-        JFrame frame = new JFrame();
-        frame.setLayout(new BorderLayout());
-        frame.add(new InputStatusPanel(), BorderLayout.SOUTH);
-        frame.add(GameGrid.makeMazeGrid(maze), BorderLayout.CENTER);
-        frame.add(new JLabel("Maze", SwingConstants.CENTER), BorderLayout.NORTH);
+        JFrame gameFrame = new JFrame();
+        gameFrame.setLayout(new BorderLayout());
+        gameFrame.add(new JLabel("Maze", SwingConstants.CENTER), BorderLayout.NORTH);
+        gameFrame.add(GameGrid.makeMazeGrid(maze), BorderLayout.CENTER);
 
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        //Adding a frame to south
+        JFrame statusFrame = new JFrame();
+        gameFrame.add(statusFrame, BorderLayout.SOUTH);
+        statusFrame.add(new InputStatusPanel(), BorderLayout.NORTH);
+        statusFrame.add(StatusBoxPanel.getStatusBoxPanel(), BorderLayout.CENTER);
+        statusFrame.add(new ButtonPanel(ValidInput.MAP, maze), BorderLayout.SOUTH);
+
+
+
+
+        //frame.add(new InputStatusPanel(), BorderLayout.SOUTH);
+        //frame.add(StatusBoxPanel.getStatusBoxPanel(), BorderLayout.SOUTH);
+
+        statusFrame.pack();
+        statusFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        statusFrame.setVisible(true);
+
+        gameFrame.pack();
+        gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gameFrame.setVisible(true);
     }
 
     public static void main(String[] args) {

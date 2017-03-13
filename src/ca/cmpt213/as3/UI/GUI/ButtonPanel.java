@@ -20,28 +20,20 @@ public class ButtonPanel extends JPanel {
                 addBtn = new JButton("Toggle Map");
                 addBtn.addActionListener(
                         event -> maze.setRevealAll(!maze.isRevealAll()));
+                add(addBtn);
+                break;
 
-                break;
+                /*
             case HELP:
-                addBtn = new JButton("Toggle Map");
+                addBtn = new JButton("Help?");
                 addBtn.addActionListener(
-                        event -> maze.setRevealAll(!maze.isRevealAll()));
+                        event -> ;
+                add(addBtn);
                 break;
-            //default:
+                */
+            default:
 
         }
-        add(addBtn);
-
-
-
-        addBtn.addActionListener(
-                event -> addNumberToList());
-        add(addBtn);
-
-        JButton clearBtn = new JButton("Clear");
-        clearBtn.addActionListener(
-                event -> clearList());
-        add(clearBtn);
     }
 
 

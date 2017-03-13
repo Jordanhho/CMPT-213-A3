@@ -9,7 +9,6 @@ import javax.swing.*;
  */
 public class InputStatusPanel extends JPanel {
 
-    private JTextArea statusTextBox;
     private JLabel statusText;
 
     public InputStatusPanel() {
