@@ -18,19 +18,6 @@ public class Rectangle extends ShapeImpl {
         }
     }
 
-        /*
-        for(int i = getLocationY(); i < getLocationY() + width - 1; i++) { //Row Y
-            for(int j = getLocationX(); j < getLocationX() + height - 1; j--) { //Col X
-                if((testLocationX == getLocationX())) {
-
-                }
-                else {
-
-                }
-            }
-        }
-        */
-
 
     protected boolean isInside(int testLocationX, int testLocationY) {
         if ((testLocationX > getLocationX() && testLocationX < getLocationX() + getWidth() - 1) && (testLocationY > getLocationY() && testLocationY < getLocationY() + getHeight() - 1)) {

@@ -7,14 +7,11 @@ import ca.cmpt213.as3.UI.MazeElements;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 
 /**
  * Created by Nova on 10/03/2017.
  */
 public class GameGrid {
-
-
 
     public static Component makeMazeGrid(Maze maze) {
         Display.printMazePackageToScreen(maze, 1);
@@ -28,22 +25,16 @@ public class GameGrid {
                 JLabel iconLabel = new JLabel();
                 Cell currentCell = maze.getMaze()[row][col];
                 char iconChar = MazeElements.getCellSymbol(currentCell, maze.isRevealAll());
-                //IconPanel iconPanel = new IconPanel(iconChar);
-                //ImageIcon gameIcon = iconPanel.getIcon();
+
                 ImageIcon gameIcon = IconPanel.getImageIcon(iconChar);
                 gameIcon = IconPanel.getScaleImageIcon(gameIcon, 45, 45);
 
-                //ImageIcon gameIcon = IconPanel.getImageIcon(iconChar);
-                //"C:/Users/Nova/CMPT213-A3/src/ca/cmpt213/as3/UI/GUI/GameIcons/UndiscoveredTile.png"
-                //iconLabel.setIcon(new ImageIcon ("C:/Users/Nova/CMPT213-A3/src/ca/cmpt213/as3/UI/GUI/GameIcons/UndiscoveredIcon.png"));
-
-                // Make an effectively final variable for use in inner class
-                //ImageIcon gameIcon = IconPanel.getImageIcon();
-                //JLabel label = new JLabel(" O ", SwingConstants.CENTER);
                 iconLabel.setIcon(gameIcon);
+                iconLabel.setPreferredSize(new Dimension(45,45));
                 iconLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
-                //iconLabel.setPreferredSize(45);
                 panel.add(iconLabel);
+
+
             }
         }
         panel.setBorder(BorderFactory.createLineBorder(Color.CYAN, 10));

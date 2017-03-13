@@ -53,13 +53,10 @@ public class GameMain {
         frame.add(GameGrid.makeMazeGrid(maze), BorderLayout.CENTER);
         frame.add(new JLabel("Maze", SwingConstants.CENTER), BorderLayout.NORTH);
 
-
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-
-
 
     public static void main(String[] args) {
         new GameMain();
