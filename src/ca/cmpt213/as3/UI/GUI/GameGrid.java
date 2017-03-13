@@ -1,20 +1,52 @@
 package ca.cmpt213.as3.UI.GUI;
 
-import ca.cmpt213.as3.UI.as3shapes.Canvas;
-import ca.cmpt213.as3.UI.as3shapes.CanvasIcon;
+import ca.cmpt213.as3.MazeGame.Cell;
+import ca.cmpt213.as3.MazeGame.Maze;
+import ca.cmpt213.as3.UI.Display;
+import ca.cmpt213.as3.UI.MazeElements;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 
 /**
  * Created by Nova on 10/03/2017.
  */
 public class GameGrid {
 
-    private static Canvas canvas = new Canvas(15, 20);
 
-    public static Component makeMazeGrid() {
-        CanvasIcon icon = new CanvasIcon(canvas);
-        return new JLabel(icon);
+
+    public static Component makeMazeGrid(Maze maze) {
+        Display.printMazePackageToScreen(maze, 1);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(maze.getWidth(), maze.getHeight()));
+
+        Cell[][] cellMaze = maze.getMaze();
+        for (int col = 0; col < maze.getWidth(); col++) {
+            for (int row = 0; row < maze.getHeight(); row++) {
+                JLabel iconLabel = new JLabel();
+                Cell currentCell = maze.getMaze()[row][col];
+                char iconChar = MazeElements.getCellSymbol(currentCell, maze.isRevealAll());
+                //IconPanel iconPanel = new IconPanel(iconChar);
+                //ImageIcon gameIcon = iconPanel.getIcon();
+                ImageIcon gameIcon = IconPanel.getImageIcon(iconChar);
+                gameIcon = IconPanel.getScaleImageIcon(gameIcon, 45, 45);
+
+                //ImageIcon gameIcon = IconPanel.getImageIcon(iconChar);
+                //"C:/Users/Nova/CMPT213-A3/src/ca/cmpt213/as3/UI/GUI/GameIcons/UndiscoveredTile.png"
+                //iconLabel.setIcon(new ImageIcon ("C:/Users/Nova/CMPT213-A3/src/ca/cmpt213/as3/UI/GUI/GameIcons/UndiscoveredIcon.png"));
+
+                // Make an effectively final variable for use in inner class
+                //ImageIcon gameIcon = IconPanel.getImageIcon();
+                //JLabel label = new JLabel(" O ", SwingConstants.CENTER);
+                iconLabel.setIcon(gameIcon);
+                iconLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+                //iconLabel.setPreferredSize(45);
+                panel.add(iconLabel);
+            }
+        }
+        panel.setBorder(BorderFactory.createLineBorder(Color.CYAN, 10));
+        return panel;
     }
 }

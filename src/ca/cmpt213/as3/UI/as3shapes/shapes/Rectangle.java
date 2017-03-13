@@ -4,13 +4,9 @@ package ca.cmpt213.as3.UI.as3shapes.shapes;
  * Rectangle class to create a rectangle
  */
 public class Rectangle extends ShapeImpl {
-    private int width;
-    private int height;
 
     public Rectangle(int xLocation, int yLocation, int width, int height) {
         super(xLocation, yLocation, width, height);
-        this.width = width;
-        this.height = height;
     }
 
     protected boolean isBorder(int testLocationX, int testLocationY) {

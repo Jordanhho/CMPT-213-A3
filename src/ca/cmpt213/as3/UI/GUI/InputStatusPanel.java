@@ -7,12 +7,12 @@ import javax.swing.*;
 /**
  * Created by Nova on 10/03/2017.
  */
-public class StatusTextPanel extends JPanel {
+public class InputStatusPanel extends JPanel {
 
     private JTextArea statusTextBox;
     private JLabel statusText;
 
-    public StatusTextPanel() {
+    public InputStatusPanel() {
         add(statusText = new JLabel("Enter a key"));
         //statusText.setText("Enter a key");
         //setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
