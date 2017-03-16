@@ -51,26 +51,26 @@ public class GameMain {
     public GameMain() {
         Maze maze = MazeFactory.makeDefaultMaze(cellRadiusView, mazeDifficulty);
         JFrame gameFrame = new JFrame();
-        gameFrame.setLayout(new BorderLayout());
-        gameFrame.add(new JLabel("Maze", SwingConstants.CENTER), BorderLayout.NORTH);
-        gameFrame.add(GameGrid.makeMazeGrid(maze), BorderLayout.CENTER);
+        gameFrame.setLayout(new BoxLayout(gameFrame.getContentPane(), BoxLayout.PAGE_AXIS));
 
-        //Adding a frame to south
-        JFrame statusFrame = new JFrame();
-        gameFrame.add(statusFrame, BorderLayout.SOUTH);
-        statusFrame.add(new InputStatusPanel(), BorderLayout.NORTH);
-        statusFrame.add(StatusBoxPanel.getStatusBoxPanel(), BorderLayout.CENTER);
-        statusFrame.add(new ButtonPanel(ValidInput.MAP, maze), BorderLayout.SOUTH);
+        //gameFrame.setLayout(new BoxLayout);
+
+        //Adds the Title of the game panel:
+        gameFrame.add(new JLabel("Maze", SwingConstants.CENTER));
+
+        //Adds the Game Maze Panel
+        gameFrame.add(new GameGrid(maze));
+
+        //Adds the input status panel
+        gameFrame.add(new InputStatusPanel());
+
+        //Adds the Status Box panel
+        gameFrame.add(StatusBoxPanel.getStatusBoxPanel());
 
 
+        //Adds the button for the toggle reveal Map
+        gameFrame.add(new ButtonPanel(ValidInput.MAP, maze));
 
-
-        //frame.add(new InputStatusPanel(), BorderLayout.SOUTH);
-        //frame.add(StatusBoxPanel.getStatusBoxPanel(), BorderLayout.SOUTH);
-
-        statusFrame.pack();
-        statusFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        statusFrame.setVisible(true);
 
         gameFrame.pack();
         gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

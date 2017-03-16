@@ -2,7 +2,6 @@ package ca.cmpt213.as3.UI.GUI;
 
 import ca.cmpt213.as3.MazeGame.Cell;
 import ca.cmpt213.as3.MazeGame.Maze;
-import ca.cmpt213.as3.UI.Display;
 import ca.cmpt213.as3.UI.MazeElements;
 
 import javax.swing.*;
@@ -11,9 +10,43 @@ import java.awt.*;
 /**
  * Created by Nova on 10/03/2017.
  */
-public class GameGrid {
+public class GameGrid extends JPanel {
 
-    public static Component makeMazeGrid(Maze maze) {
+    public GameGrid(Maze maze) {
+
+        //Set grid layout
+        this.setLayout(new GridLayout(maze.getWidth(), maze.getHeight()));
+
+
+        //init the icon list
+        IconPanel iconList = new IconPanel();
+
+        //draw the maze
+        Cell[][] cellMaze = maze.getMaze();
+        for (int col = 0; col < maze.getWidth(); col++) {
+            for (int row = 0; row < maze.getHeight(); row++) {
+                JLabel iconLabel = new JLabel();
+                Cell currentCell = maze.getMaze()[row][col];
+                char iconChar = MazeElements.getCellSymbol(currentCell, maze.isRevealAll());
+
+                ImageIcon gameIcon = iconList.getImageIcon(iconChar);
+                gameIcon = iconList.getScaleImageIcon(gameIcon, 45, 45);
+
+                iconLabel.setIcon(gameIcon);
+                iconLabel.setPreferredSize(new Dimension(45,45));
+                iconLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+                this.add(iconLabel);
+
+
+            }
+        }
+        this.setBorder(BorderFactory.createLineBorder(Color.CYAN, 10));
+    }
+
+
+
+    /*
+    public Component makeMazeGrid(Maze maze) {
         Display.printMazePackageToScreen(maze, 1);
 
         JPanel panel = new JPanel();
@@ -40,4 +73,5 @@ public class GameGrid {
         panel.setBorder(BorderFactory.createLineBorder(Color.CYAN, 10));
         return panel;
     }
+    */
 }

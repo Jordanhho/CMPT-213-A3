@@ -15,9 +15,9 @@ public class StatusBoxPanel extends JPanel {
     }
 */
 
-
     public static Component getStatusBoxPanel() {
         statusBox.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+        statusBox.setSize(new Dimension(50,10));
         statusBox.setBackground(Color.WHITE);
         return statusBox;
     }
