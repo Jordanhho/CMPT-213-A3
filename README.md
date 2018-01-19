@@ -1,2 +1,2 @@
-CMPT213-A3
+# CMPT213-A3
 Java Swing Maze Game
